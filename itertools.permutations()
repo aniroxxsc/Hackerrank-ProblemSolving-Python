@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+n1 = list(n.split())
+n = sorted(n1[0])
+n1 = int(n1[1])
+
+from itertools import permutations
+list_C = list(permutations(n,n1))
+for i in list_C:
+    a=""
+    for j in range(0,n1):
+        a += i[j]
+    print(a)
